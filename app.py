@@ -9,7 +9,7 @@ r = st.slider("Select a risk-free rate: ", 0.01, 0.05, 0.03)
 sigma = st.slider("Select a volatility: ", 0.1, 0.5, 0.2)
 T = st.slider("Select a time to maturity (in years): ", 0.1, 2.0, 1.0)
 
-st.metric("Option Price: ", analytics.black_scholes(S0, K, r, sigma, T))
+st.metric("Option Price: ", round(analytics.black_scholes(S0, K, r, sigma, T), 4))
 col1,col2, col3, col4, col5 = st.columns(5)
 
 with col1:
